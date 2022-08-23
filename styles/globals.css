@@ -15,12 +15,97 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.banner h1{
+  margin-top: 25vh;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  text-shadow: none;
+  font-size: 60px!important;
+  color: white;
+}
+.banner{
+  background-image: url("../public/images/mesh-gradient.png");
+  height: 65vh;
+}
+.banner h5{
+  font-family: "Ubuntu";
+  text-shadow: none;
+  color: white;
+  padding: 0px 10px;
+}
+.banner_btn{
+  background-color: #FDB9FC!important;
+}
+.banner_btn:hover{
+  background-color: #ED50F1!important;
+  padding: 10px 40px!important;
+  transition: 1s;
+}
+.banner_btn1{
+  background-color: #FFEDED!important;
+}
+.banner_btn1:hover{
+  background-color: #FFF6CD!important;
+  padding: 10px 40px!important;
+  transition: 1s;
+}
+.banner_btn1:not( :hover ), .banner_btn:not( :hover ) {
+  transition: 1s;
+}
+
+.banner_right > svg {
+  position: absolute;
+  top: -10px;
+  left: 150px;
+  height: 50vh;
+}
+.banner_right img {
+  position: absolute;
+  top: 100px;
+  left: -40px;
+  height: 48vh;
+}
+.sidebar_btn {
+  height: 100vh;
+  width: fit-content;
+  background-color: #f8f9fa;
+  z-index: 1;
+}
+.list_type a {
+  color: black;
+}
+.list_type:hover{
+  cursor: pointer;
+  color: #ED50F1;
+}
+.list_type a:hover{
+  color: #ED50F1;
+  text-decoration: none;
+}
+
+
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+
+.grid_container {
+  display: grid;
+  grid-template-areas: 'menu main main main main main main main main main main main main main main main main';
+}
+
+.t_head {
+  position: sticky!important;
+  top: 70px!important;
+}
+.t_head tr th{
+  padding: 0px!important;
+  text-align: center;
+}
+tbody tr td, tbody tr th{
+  padding: 0px 5px!important;
+  text-align: center;
+}
+tbody tr th{
+  position: sticky!important;
+  left: 10px!important;
+  background-color: rgb(255, 250, 206);
 }

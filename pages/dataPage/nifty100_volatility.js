@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import data from '../../data'
@@ -7,7 +7,7 @@ import SideBarMaster from '../../components/SideBarMaster'
 import NiftyHundredVolatility from '../../components/table/NiftyHundredVolatility'
 
 export default function nifty100_volatility({BlogData}) {
-    const [sortingValue, setSortingValue] = useState('Daily Volitality')
+    const sortingValue = 'Daily Volitality'
 
     const tableData = BlogData[0];
     let allData = [];

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import SideBarMaster from '../../components/SideBarMaster'
@@ -7,7 +7,7 @@ import { FirebaseFirestore } from '../../firebase'
 
 export default function master_sheet({BlogData}) {
 
-    const [sortingValue, setSortingValue] = useState('SYMBOL ')
+    const sortingValue = 'SYMBOL '
 
     const tableData = BlogData[0];
     let allData = [];

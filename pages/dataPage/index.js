@@ -12,7 +12,9 @@ export default function dataPage({BlogData}) {
 
     for (var key in tableData) {
         var element = tableData[key];
-        allData.push(element)  
+        if(key != "Date") {
+            allData.push(element)
+        }
     }
 
     var ts = tableData.Date;

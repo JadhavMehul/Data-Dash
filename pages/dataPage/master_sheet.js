@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import SideBarMaster from '../../components/SideBarMaster'
@@ -8,13 +8,17 @@ import { FirebaseFirestore } from '../../firebase'
 export default function master_sheet({BlogData}) {
 
     const sortingValue = 'SYMBOL '
+    // const [sortingValue, setSortingValue] = useState('SYMBOL ')
+
 
     const tableData = BlogData[0];
     let allData = [];
 
     for (var key in tableData) {
         var element = tableData[key];
-        allData.push(element)
+        if(key != "Date") {
+            allData.push(element)
+        }
     }
 
     var ts = tableData.Date;
@@ -43,6 +47,17 @@ export default function master_sheet({BlogData}) {
                 <div className="item3 mt-5">
 
                     <h3 className="ml-5" style={{color: "red"}}><p>Date:- {date}</p></h3>
+
+                    {/* <div className="dropdown">
+                        <button className="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            Sort Table
+                        </button>
+                        <div className="dropdown-menu">
+                            <button className="dropdown-item" onClick={() => setSortingValue('SYMBOL ')}>Symbol: Alphabetical Order</button>
+                            <button className="dropdown-item" onClick={() => setSortingValue('NT1')}>Daily Volitality: Largest to Smallest</button>
+                            <button className="dropdown-item" onClick={() => setSortingValue('Yearly Volitality')}>Yearly Volitality: Largest to Smallest</button>
+                        </div>
+                    </div> */}
 
                     <table className="table table-striped">
                         <thead className="thead-dark t_head">
